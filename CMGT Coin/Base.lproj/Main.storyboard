@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="81R-h2-if2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="CMGT_Coin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-Tm-znN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdM-TK-hoB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HR_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-sZ-rSy">
+                                                <rect key="frame" x="95.5" y="110.5" width="223" height="233"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="233" id="WMw-Ea-SgI"/>
+                                                    <constraint firstAttribute="width" constant="223" id="pVY-5p-DTk"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="HR_Color"/>
+                                        <constraints>
+                                            <constraint firstItem="dyw-sZ-rSy" firstAttribute="centerX" secondItem="AdM-TK-hoB" secondAttribute="centerX" id="YDd-sJ-wGV"/>
+                                            <constraint firstItem="dyw-sZ-rSy" firstAttribute="centerY" secondItem="AdM-TK-hoB" secondAttribute="centerY" id="mUa-Fu-tAU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nf2-hT-Ogb">
+                                        <rect key="frame" x="0.0" y="454" width="414" height="442"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-6s-h5X">
+                                                <rect key="frame" x="132" y="175" width="150" height="92"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-So-3tx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="42"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <state key="normal" title="CMGT Miner">
+                                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="esz-HA-dGi" kind="show" id="0NL-aX-a11"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wn-f6-0C5">
+                                                        <rect key="frame" x="0.0" y="50" width="150" height="42"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <state key="normal" title="Leaderboard">
+                                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="ybF-Ox-L3d" kind="show" id="yGS-qF-b7n"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="HR_Color"/>
+                                        <constraints>
+                                            <constraint firstItem="qA9-6s-h5X" firstAttribute="centerX" secondItem="Nf2-hT-Ogb" secondAttribute="centerX" id="I2u-bb-4JL"/>
+                                            <constraint firstItem="qA9-6s-h5X" firstAttribute="centerY" secondItem="Nf2-hT-Ogb" secondAttribute="centerY" id="Zk8-4n-LFA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nf2-hT-Ogb" firstAttribute="top" secondItem="aXA-Tm-znN" secondAttribute="top" constant="454" id="tgo-jJ-LGx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aXA-Tm-znN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9KW-KU-8gv"/>
+                            <constraint firstItem="aXA-Tm-znN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GTG-IW-mgZ"/>
+                            <constraint firstItem="aXA-Tm-znN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="See-xX-Wxt"/>
+                            <constraint firstAttribute="bottom" secondItem="aXA-Tm-znN" secondAttribute="bottom" id="wwP-F2-dP2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Smb-hw-Q4e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Coin Miner-->
+        <scene sceneID="MR0-LZ-OrB">
+            <objects>
+                <viewController id="esz-HA-dGi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E53-Ko-9Nv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="S7W-fh-SqR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Coin Miner" id="OZJ-Kl-ll9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIo-ar-4UH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2538" y="-226"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="2jk-KB-Kag">
+            <objects>
+                <viewController id="ybF-Ox-L3d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p1U-re-IZz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Sap-3i-4s4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="oWh-C7-4XW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWm-kB-jTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zWT-ia-KNV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="81R-h2-if2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CMC-GD-05x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kls-HY-GpR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvr-hW-Xd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HR_Logo" width="2400" height="2400"/>
+        <namedColor name="HR_Color">
+            <color red="0.81176470588235294" green="0.0078431372549019607" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
