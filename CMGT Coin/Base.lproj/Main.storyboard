@@ -59,7 +59,7 @@
                                                             <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="ybF-Ox-L3d" kind="show" id="yGS-qF-b7n"/>
+                                                            <segue destination="SMd-70-crJ" kind="show" id="Jdb-4v-JU9"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -109,20 +109,49 @@
             <point key="canvasLocation" x="2538" y="-226"/>
         </scene>
         <!--Leaderboard-->
-        <scene sceneID="2jk-KB-Kag">
+        <scene sceneID="ACF-iw-hot">
             <objects>
-                <viewController id="ybF-Ox-L3d" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="p1U-re-IZz">
+                <tableViewController id="SMd-70-crJ" customClass="LeaderboardTableViewController" customModule="CMGT_Coin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sh9-QB-POB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Sap-3i-4s4"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Leaderboard" id="oWh-C7-4XW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DWm-kB-jTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardCell" textLabel="NhZ-5f-E5x" detailTextLabel="I8E-Lo-Jqc" style="IBUITableViewCellStyleValue1" id="MOL-TZ-cee">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MOL-TZ-cee" id="hln-Am-oKi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NhZ-5f-E5x">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I8E-Lo-Jqc">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SMd-70-crJ" id="aWv-b0-8uM"/>
+                            <outlet property="delegate" destination="SMd-70-crJ" id="S3C-Kj-N3N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="7rx-Eh-Qzd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlF-0L-g3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2535" y="451"/>
+            <point key="canvasLocation" x="2538" y="458"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zWT-ia-KNV">

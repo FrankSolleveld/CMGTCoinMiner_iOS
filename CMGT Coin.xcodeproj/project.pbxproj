@@ -15,6 +15,8 @@
 		95A43CF12442174B0079298C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A43CEF2442174B0079298C /* LaunchScreen.storyboard */; };
 		95A4D3632446464C00FD1E80 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4D3622446464C00FD1E80 /* K.swift */; };
 		95A4D36624464BD800FD1E80 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4D36524464BD800FD1E80 /* Alamofire */; };
+		95A4D36824464D4F00FD1E80 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4D36724464D4F00FD1E80 /* LeaderboardTableViewController.swift */; };
+		95A4D36C24464DF800FD1E80 /* LeaderboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4D36B24464DF800FD1E80 /* LeaderboardBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		95A43CF02442174B0079298C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95A43CF22442174B0079298C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A4D3622446464C00FD1E80 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		95A4D36724464D4F00FD1E80 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		95A4D36B24464DF800FD1E80 /* LeaderboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,16 +64,34 @@
 		95A43CE32442174A0079298C /* CMGT Coin */ = {
 			isa = PBXGroup;
 			children = (
+				95A4D36A24464DE800FD1E80 /* Models */,
+				95A4D36924464D9100FD1E80 /* Controllers */,
+				95A4D3622446464C00FD1E80 /* K.swift */,
 				95A43CE42442174A0079298C /* AppDelegate.swift */,
 				95A43CE62442174A0079298C /* SceneDelegate.swift */,
-				95A43CE82442174A0079298C /* MenuViewController.swift */,
 				95A43CEA2442174A0079298C /* Main.storyboard */,
 				95A43CED2442174B0079298C /* Assets.xcassets */,
 				95A43CEF2442174B0079298C /* LaunchScreen.storyboard */,
 				95A43CF22442174B0079298C /* Info.plist */,
-				95A4D3622446464C00FD1E80 /* K.swift */,
 			);
 			path = "CMGT Coin";
+			sourceTree = "<group>";
+		};
+		95A4D36924464D9100FD1E80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95A43CE82442174A0079298C /* MenuViewController.swift */,
+				95A4D36724464D4F00FD1E80 /* LeaderboardTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95A4D36A24464DE800FD1E80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95A4D36B24464DF800FD1E80 /* LeaderboardBrain.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A4D36824464D4F00FD1E80 /* LeaderboardTableViewController.swift in Sources */,
 				95A43CE92442174A0079298C /* MenuViewController.swift in Sources */,
 				95A4D3632446464C00FD1E80 /* K.swift in Sources */,
 				95A43CE52442174A0079298C /* AppDelegate.swift in Sources */,
+				95A4D36C24464DF800FD1E80 /* LeaderboardBrain.swift in Sources */,
 				95A43CE72442174A0079298C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,5 +15,8 @@ struct K {
         static let hrRed = "HR_Color"
     }
     
+    struct Table {
+        static let leaderboardCell = "leaderboardCell"
+    }
     
 }
