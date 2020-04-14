@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		95A43CEE2442174B0079298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A43CED2442174B0079298C /* Assets.xcassets */; };
 		95A43CF12442174B0079298C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A43CEF2442174B0079298C /* LaunchScreen.storyboard */; };
 		95A4D3632446464C00FD1E80 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4D3622446464C00FD1E80 /* K.swift */; };
+		95A4D36624464BD800FD1E80 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4D36524464BD800FD1E80 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A4D36624464BD800FD1E80 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = "CMGT Coin";
+			packageProductDependencies = (
+				95A4D36524464BD800FD1E80 /* Alamofire */,
+			);
 			productName = "CMGT Coin";
 			productReference = 95A43CE1244217490079298C /* CMGT Coin.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 95A43CD8244217490079298C;
+			packageReferences = (
+				95A4D36424464BD800FD1E80 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 95A43CE2244217490079298C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95A4D36424464BD800FD1E80 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95A4D36524464BD800FD1E80 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A4D36424464BD800FD1E80 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95A43CD9244217490079298C /* Project object */;
 }
