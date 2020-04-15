@@ -23,9 +23,11 @@ struct LeaderboardBrain {
     private let apiUrlUsers = "users"
     
     func getLeaderboard() {
+       
         AF.request("\(apiUrl)\(apiUrlUsers)").responseJSON { response in
             print(response)
         }
+        
     }
     
 }

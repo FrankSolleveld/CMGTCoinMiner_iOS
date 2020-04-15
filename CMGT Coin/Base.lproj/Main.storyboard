@@ -175,7 +175,7 @@
     <resources>
         <image name="HR_Logo" width="2400" height="2400"/>
         <namedColor name="HR_Color">
-            <color red="0.81176470588235294" green="0.0078431372549019607" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81199997663497925" green="0.0080000003799796104" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
