@@ -17,8 +17,8 @@ class LeaderboardTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = false
-        leaderboardBrain.getLeaderboard()
-        // then update leaderboard array with fetched results
+        leaderboardBrain.performApiCallToLeaderboard()
+        // sorted method sorts leads with most coins at top, thhen descends to lower tiers.
         lb = leaderboardBrain.leaderboard.sorted(by: { $0.coins > $1.coins })
     }
 
