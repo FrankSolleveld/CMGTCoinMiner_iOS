@@ -18,31 +18,29 @@ struct LeaderboardBrain {
     let apiUrl = URL(string: "https://programmeren9.cmgt.hr.nl:8000/api/users")
     let session = URLSession.shared
     
-    lazy var lead: [Lead] = [
-        Lead(name: "0940599", coins: 74),
-        Lead(name: "0940590", coins: 300)
-    ]
-    
-    mutating func performApiCallToLeaderboard() {
+    mutating func performApiCallToLeaderboard() -> Data {
+        var jsonData = Data()
         if let url = apiUrl {
             let task = session.dataTask(with: url) { (data, response, error) in
                 if let err = error {
                     print(err)
                 } else if let d = data {
-                    self.lead = self.parseJSON(with: d)
+                    jsonData = d
                 }
             }
             task.resume()
         }
+        return jsonData
     }
     
-   func parseJSON(with json: Data) -> [Lead] {
+    func sortJSONIntoArray(json: Data) -> [Lead] {
+        // Data has been retrieved and will be JSON'ed and sorted out.
         let j = JSON(json)
         var l: [Lead] = []
-        for d in j {
-            let s = Lead(name: d.0, coins: d.1.intValue)
+        for v in j {
+            let s = Lead(name: v.0, coins: v.1.intValue)
             l.append(s)
         }
-        return l
+        return l.sorted(by: { $0.coins > $1.coins })
     }
 }
