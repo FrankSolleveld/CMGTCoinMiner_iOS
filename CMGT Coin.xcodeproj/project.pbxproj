@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9539B22424479A9C004B701A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9539B22324479A9C004B701A /* SwiftyJSON */; };
 		95A43CE52442174A0079298C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE42442174A0079298C /* AppDelegate.swift */; };
 		95A43CE72442174A0079298C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE62442174A0079298C /* SceneDelegate.swift */; };
 		95A43CE92442174A0079298C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE82442174A0079298C /* MenuViewController.swift */; };
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9539B22424479A9C004B701A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +111,7 @@
 			);
 			name = "CMGT Coin";
 			packageProductDependencies = (
+				9539B22324479A9C004B701A /* SwiftyJSON */,
 			);
 			productName = "CMGT Coin";
 			productReference = 95A43CE1244217490079298C /* CMGT Coin.app */;
@@ -139,6 +142,7 @@
 			);
 			mainGroup = 95A43CD8244217490079298C;
 			packageReferences = (
+				9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 95A43CE2244217490079298C /* Products */;
 			projectDirPath = "";
@@ -372,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9539B22324479A9C004B701A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95A43CD9244217490079298C /* Project object */;
 }

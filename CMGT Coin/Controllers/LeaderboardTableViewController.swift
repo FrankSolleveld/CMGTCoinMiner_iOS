@@ -10,7 +10,7 @@ import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
 
-    let leaderboardBrain = LeaderboardBrain()
+    var leaderboardBrain = LeaderboardBrain()
     var lb: [Lead] = []
     
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class LeaderboardTableViewController: UITableViewController {
         navigationController?.isNavigationBarHidden = false
         leaderboardBrain.performApiCallToLeaderboard()
         // sorted method sorts leads with most coins at top, thhen descends to lower tiers.
-        lb = leaderboardBrain.leaderboard.sorted(by: { $0.coins > $1.coins })
+        lb = leaderboardBrain.lead.sorted(by: { $0.coins > $1.coins })
     }
 
     // MARK: - Table view data source
