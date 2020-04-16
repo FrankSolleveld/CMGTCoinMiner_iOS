@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="81R-h2-if2">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="CMGT_Coin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-Tm-znN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdM-TK-hoB">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HR_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-sZ-rSy">
-                                                <rect key="frame" x="95.5" y="110.5" width="223" height="233"/>
+                                                <rect key="frame" x="76" y="110.5" width="223" height="233"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="233" id="WMw-Ea-SgI"/>
                                                     <constraint firstAttribute="width" constant="223" id="pVY-5p-DTk"/>
@@ -37,10 +37,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nf2-hT-Ogb">
-                                        <rect key="frame" x="0.0" y="454" width="414" height="442"/>
+                                        <rect key="frame" x="0.0" y="454" width="375" height="213"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-6s-h5X">
-                                                <rect key="frame" x="132" y="175" width="150" height="92"/>
+                                                <rect key="frame" x="112.5" y="60.5" width="150" height="92"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-So-3tx">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="42"/>
@@ -97,42 +97,75 @@
             <objects>
                 <viewController id="esz-HA-dGi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E53-Ko-9Nv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="43t-Ig-W2M">
+                                <rect key="frame" x="103" y="300" width="169" height="67"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your student number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MS7-py-ntS">
+                                <rect key="frame" x="20" y="437" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="f9j-1C-gJN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-dA-FA1">
+                                <rect key="frame" x="160" y="531" width="55" height="30"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0039215686269999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Mine">
+                                    <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i5p-dA-FA1" firstAttribute="top" secondItem="MS7-py-ntS" secondAttribute="bottom" constant="60" id="1yQ-i7-kQr"/>
+                            <constraint firstItem="43t-Ig-W2M" firstAttribute="centerX" secondItem="E53-Ko-9Nv" secondAttribute="centerX" id="474-3A-trn"/>
+                            <constraint firstItem="S7W-fh-SqR" firstAttribute="trailing" secondItem="MS7-py-ntS" secondAttribute="trailing" constant="20" id="6u2-7w-xXg"/>
+                            <constraint firstItem="MS7-py-ntS" firstAttribute="leading" secondItem="S7W-fh-SqR" secondAttribute="leading" constant="20" id="7yU-ZT-KVy"/>
+                            <constraint firstItem="i5p-dA-FA1" firstAttribute="centerX" secondItem="E53-Ko-9Nv" secondAttribute="centerX" id="KE1-0z-AvK"/>
+                            <constraint firstItem="43t-Ig-W2M" firstAttribute="top" secondItem="S7W-fh-SqR" secondAttribute="top" constant="204" id="McK-Pj-iY2"/>
+                            <constraint firstItem="43t-Ig-W2M" firstAttribute="centerY" secondItem="E53-Ko-9Nv" secondAttribute="centerY" id="QqW-mF-ECB"/>
+                            <constraint firstItem="i5p-dA-FA1" firstAttribute="leading" secondItem="S7W-fh-SqR" secondAttribute="leading" constant="160" id="a89-gQ-PtC"/>
+                            <constraint firstItem="MS7-py-ntS" firstAttribute="top" secondItem="43t-Ig-W2M" secondAttribute="bottom" constant="70" id="uFZ-pP-fjU"/>
+                            <constraint firstItem="43t-Ig-W2M" firstAttribute="leading" secondItem="S7W-fh-SqR" secondAttribute="leading" constant="103" id="zXN-jj-IMp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S7W-fh-SqR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Coin Miner" id="OZJ-Kl-ll9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIo-ar-4UH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="-226"/>
+            <point key="canvasLocation" x="2537.68115942029" y="-226.33928571428569"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="ACF-iw-hot">
             <objects>
                 <tableViewController id="SMd-70-crJ" customClass="LeaderboardTableViewController" customModule="CMGT_Coin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sh9-QB-POB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardCell" textLabel="NhZ-5f-E5x" detailTextLabel="I8E-Lo-Jqc" style="IBUITableViewCellStyleValue1" id="MOL-TZ-cee">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MOL-TZ-cee" id="hln-Am-oKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NhZ-5f-E5x">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I8E-Lo-Jqc">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -159,7 +192,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="81R-h2-if2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CMC-GD-05x">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -174,6 +207,7 @@
     </scenes>
     <resources>
         <image name="HR_Logo" width="2400" height="2400"/>
+        <image name="coin" width="512" height="512"/>
         <namedColor name="HR_Color">
             <color red="0.81199997663497925" green="0.0080000003799796104" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
