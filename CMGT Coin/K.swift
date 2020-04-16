@@ -19,4 +19,8 @@ struct K {
         static let leaderboardCell = "leaderboardCell"
     }
     
+    struct TableBrain {
+        static let removableString = "marleenikhounogsteedsvanje"
+    }
+    
 }

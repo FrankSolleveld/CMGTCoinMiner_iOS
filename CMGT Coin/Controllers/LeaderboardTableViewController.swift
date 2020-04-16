@@ -10,9 +10,9 @@ import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
 
-    var leaderboardBrain = LeaderboardBrain()
+    var leaderboardBrain = LeaderboardBrain.shared
     
-    var leaderboard: [Lead] = [
+    var lb: [Lead] = [
         Lead(name: "0940599", coins: 74),
         Lead(name: "0940590", coins: 300)
     ]
@@ -21,22 +21,23 @@ class LeaderboardTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
         DispatchQueue.main.async {
-            let result = self.leaderboardBrain.performApiCallToLeaderboard()
-            if result.isEmpty {
+            if self.leaderboardBrain.leaderboard.isEmpty {
                 print("The call resulted in an empty array.")
             } else {
-                self.leaderboard = self.leaderboardBrain.sortJSONIntoArray(json: result)
+                self.lb = []
+                self.lb = self.leaderboardBrain.leaderboard
+                self.tableView.reloadData()
             }
         }
     }
 
     // MARK: - Table view delegate methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return leaderboard.count
+        return lb.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let lead = leaderboard[indexPath.row]
+        let lead = lb[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Table.leaderboardCell, for: indexPath)
     
         cell.textLabel?.text = "\(indexPath.row + 1). \(lead.name)"
