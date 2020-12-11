@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95144D722448771B008C5136 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95144D712448771B008C5136 /* IQKeyboardManagerSwift */; };
+		95144D74244878A8008C5136 /* CoinMiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95144D73244878A8008C5136 /* CoinMiner.swift */; };
 		95198F6C244846CE00E6EB91 /* MinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95198F6B244846CE00E6EB91 /* MinerViewController.swift */; };
-		9539B22424479A9C004B701A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9539B22324479A9C004B701A /* SwiftyJSON */; };
+		958547CA25839D5A00E7398F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 958547C925839D5A00E7398F /* SwiftyJSON */; };
 		95A43CE52442174A0079298C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE42442174A0079298C /* AppDelegate.swift */; };
 		95A43CE72442174A0079298C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE62442174A0079298C /* SceneDelegate.swift */; };
 		95A43CE92442174A0079298C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A43CE82442174A0079298C /* MenuViewController.swift */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95144D73244878A8008C5136 /* CoinMiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMiner.swift; sourceTree = "<group>"; };
 		95198F6B244846CE00E6EB91 /* MinerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerViewController.swift; sourceTree = "<group>"; };
 		95A43CE1244217490079298C /* CMGT Coin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMGT Coin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A43CE42442174A0079298C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9539B22424479A9C004B701A /* SwiftyJSON in Frameworks */,
+				958547CA25839D5A00E7398F /* SwiftyJSON in Frameworks */,
+				95144D722448771B008C5136 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				95A4D36B24464DF800FD1E80 /* LeaderboardBrain.swift */,
+				95144D73244878A8008C5136 /* CoinMiner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,7 +119,8 @@
 			);
 			name = "CMGT Coin";
 			packageProductDependencies = (
-				9539B22324479A9C004B701A /* SwiftyJSON */,
+				95144D712448771B008C5136 /* IQKeyboardManagerSwift */,
+				958547C925839D5A00E7398F /* SwiftyJSON */,
 			);
 			productName = "CMGT Coin";
 			productReference = 95A43CE1244217490079298C /* CMGT Coin.app */;
@@ -127,7 +133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Frank Solleveld";
 				TargetAttributes = {
 					95A43CE0244217490079298C = {
@@ -145,7 +151,8 @@
 			);
 			mainGroup = 95A43CD8244217490079298C;
 			packageReferences = (
-				9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				95144D702448771B008C5136 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				958547C825839D5A00E7398F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 95A43CE2244217490079298C /* Products */;
 			projectDirPath = "";
@@ -180,6 +187,7 @@
 				95198F6C244846CE00E6EB91 /* MinerViewController.swift in Sources */,
 				95A43CE52442174A0079298C /* AppDelegate.swift in Sources */,
 				95A4D36C24464DF800FD1E80 /* LeaderboardBrain.swift in Sources */,
+				95144D74244878A8008C5136 /* CoinMiner.swift in Sources */,
 				95A43CE72442174A0079298C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +240,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -292,6 +301,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -382,9 +392,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		95144D702448771B008C5136 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
+		958547C825839D5A00E7398F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
@@ -393,9 +411,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9539B22324479A9C004B701A /* SwiftyJSON */ = {
+		95144D712448771B008C5136 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9539B22224479A9C004B701A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = 95144D702448771B008C5136 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		958547C925839D5A00E7398F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 958547C825839D5A00E7398F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

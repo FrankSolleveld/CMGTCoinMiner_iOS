@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="81R-h2-if2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="81R-h2-if2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,23 +42,23 @@
                                         <rect key="frame" x="0.0" y="454" width="375" height="213"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-6s-h5X">
-                                                <rect key="frame" x="112.5" y="60.5" width="150" height="92"/>
+                                                <rect key="frame" x="113" y="60.5" width="149" height="92"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-So-3tx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-So-3tx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="149" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                         <state key="normal" title="CMGT Miner">
-                                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemGray6Color"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="esz-HA-dGi" kind="show" id="0NL-aX-a11"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wn-f6-0C5">
-                                                        <rect key="frame" x="0.0" y="50" width="150" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wn-f6-0C5">
+                                                        <rect key="frame" x="0.0" y="50" width="149" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                         <state key="normal" title="Leaderboard">
-                                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemGray6Color"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="SMd-70-crJ" kind="show" id="Jdb-4v-JU9"/>
@@ -77,14 +79,14 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aXA-Tm-znN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9KW-KU-8gv"/>
                             <constraint firstItem="aXA-Tm-znN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GTG-IW-mgZ"/>
                             <constraint firstItem="aXA-Tm-znN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="See-xX-Wxt"/>
                             <constraint firstAttribute="bottom" secondItem="aXA-Tm-znN" secondAttribute="bottom" id="wwP-F2-dP2"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Smb-hw-Q4e"/>
                 </viewController>
@@ -95,32 +97,36 @@
         <!--Coin Miner-->
         <scene sceneID="MR0-LZ-OrB">
             <objects>
-                <viewController id="esz-HA-dGi" sceneMemberID="viewController">
+                <viewController id="esz-HA-dGi" customClass="MinerViewController" customModule="CMGT_Coin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E53-Ko-9Nv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="43t-Ig-W2M">
-                                <rect key="frame" x="103" y="300" width="169" height="67"/>
+                                <rect key="frame" x="103" y="248" width="169" height="171"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your student number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MS7-py-ntS">
-                                <rect key="frame" x="20" y="437" width="335" height="34"/>
+                                <rect key="frame" x="20" y="489" width="335" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="f9j-1C-gJN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-dA-FA1">
-                                <rect key="frame" x="160" y="531" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-dA-FA1">
+                                <rect key="frame" x="160" y="583" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.0039215686269999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Mine">
-                                    <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="mineButtonPressed:" destination="esz-HA-dGi" eventType="touchUpInside" id="DtW-Yu-9EE"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="S7W-fh-SqR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="i5p-dA-FA1" firstAttribute="top" secondItem="MS7-py-ntS" secondAttribute="bottom" constant="60" id="1yQ-i7-kQr"/>
                             <constraint firstItem="43t-Ig-W2M" firstAttribute="centerX" secondItem="E53-Ko-9Nv" secondAttribute="centerX" id="474-3A-trn"/>
@@ -133,9 +139,13 @@
                             <constraint firstItem="MS7-py-ntS" firstAttribute="top" secondItem="43t-Ig-W2M" secondAttribute="bottom" constant="70" id="uFZ-pP-fjU"/>
                             <constraint firstItem="43t-Ig-W2M" firstAttribute="leading" secondItem="S7W-fh-SqR" secondAttribute="leading" constant="103" id="zXN-jj-IMp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="S7W-fh-SqR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Coin Miner" id="OZJ-Kl-ll9"/>
+                    <navigationItem key="navigationItem" title="Coin Miner" largeTitleDisplayMode="never" id="OZJ-Kl-ll9"/>
+                    <connections>
+                        <outlet property="coinImage" destination="43t-Ig-W2M" id="aLp-YA-gFb"/>
+                        <outlet property="mineButton" destination="i5p-dA-FA1" id="12k-cT-i51"/>
+                        <outlet property="nameInputField" destination="MS7-py-ntS" id="KJq-wI-KJS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIo-ar-4UH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,9 +158,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sh9-QB-POB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardCell" textLabel="NhZ-5f-E5x" detailTextLabel="I8E-Lo-Jqc" style="IBUITableViewCellStyleValue1" id="MOL-TZ-cee">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="leaderboardCell" textLabel="NhZ-5f-E5x" detailTextLabel="I8E-Lo-Jqc" style="IBUITableViewCellStyleValue1" id="MOL-TZ-cee">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MOL-TZ-cee" id="hln-Am-oKi">
@@ -158,7 +168,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NhZ-5f-E5x">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="12" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -211,5 +221,11 @@
         <namedColor name="HR_Color">
             <color red="0.81199997663497925" green="0.0080000003799796104" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

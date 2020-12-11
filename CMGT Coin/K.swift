@@ -10,6 +10,8 @@ import Foundation
 
 struct K {
     
+    static let url = "https://programmeren9.cmgt.hr.nl:8000/api/blockchain/next"
+    
     struct Colors{
         // Color Names
         static let hrRed = "HR_Color"
